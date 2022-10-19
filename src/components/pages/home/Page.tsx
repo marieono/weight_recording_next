@@ -1,8 +1,12 @@
 import type { NextPage } from "next"
+import Footer from "../../common/Footer"
 import Header from "../../common/Header"
 
 const Page: NextPage = () => {
-  return <Header />
+  return (
+    // <Header />
+    <Footer />
+  )
 }
 
 export default Page
