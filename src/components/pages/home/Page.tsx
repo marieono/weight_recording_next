@@ -4,8 +4,10 @@ import Header from "../../common/Header"
 
 const Page: NextPage = () => {
   return (
-    // <Header />
-    <Footer />
+    <>
+      <Header />
+      <Footer />
+    </>
   )
 }
 
