@@ -10,7 +10,7 @@ const Backbutton = () => {
       <path
         d="M19.705 11.41L18.295 10L12.295 16L18.295 22L19.705 20.59L15.125 16L19.705 11.41Z"
         fill="black"
-        // fill-opacity="0.54"
+        fillOpacity="0.54"
       />
     </svg>
   )
