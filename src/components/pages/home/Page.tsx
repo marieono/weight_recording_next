@@ -16,7 +16,7 @@ const Page: NextPage = () => {
       <Registerbutton />
       <Height />
       <GoalWeight />
-      <Footer />
+      <Footer activeMenu="input" />
     </>
   )
 }
