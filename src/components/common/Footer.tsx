@@ -1,6 +1,12 @@
 import { css } from "@emotion/react"
 
-const Footer = () => {
+type ActiveMenuType = "input" | "calendar" | "config"
+
+type Props = {
+  activeMenu: ActiveMenuType
+}
+
+const Footer = ({ activeMenu }: Props) => {
   return (
     <footer
       css={css`
@@ -15,17 +21,15 @@ const Footer = () => {
         background-color: #e6e6e6;
       `}
     >
-      <span
-        css={css`
-          color: #f95791;
-        `}
-      >
-        入力
-      </span>
-      <span>カレンダー</span>
-      <span>設定</span>
+      <span css={activeMenu === "input" && activeMenuStyle}>入力</span>
+      <span css={activeMenu === "calendar" && activeMenuStyle}>カレンダー</span>
+      <span css={activeMenu === "config" && activeMenuStyle}>設定</span>
     </footer>
   )
 }
 
 export default Footer
+
+const activeMenuStyle = css`
+  color: #f95791;
+`
