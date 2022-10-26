@@ -1,6 +1,10 @@
 import { css } from "@emotion/react"
 
-const Header = () => {
+type Props = {
+  title: string
+}
+
+const Header = ({ title }: Props) => {
   return (
     <div
       css={css`
@@ -13,7 +17,7 @@ const Header = () => {
         background-color: #e6e6e6;
       `}
     >
-      入力
+      {title}
     </div>
   )
 }
