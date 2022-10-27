@@ -10,13 +10,13 @@ import Height from "../../common/Height"
 const Page: NextPage = () => {
   return (
     <>
-      <Header />
+      <Header title="入力" />
       <Date />
       <Weight_input />
       <Registerbutton />
       <Height />
       <GoalWeight />
-      <Footer />
+      <Footer activeMenu="input" />
     </>
   )
 }
