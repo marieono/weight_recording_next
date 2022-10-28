@@ -1,4 +1,5 @@
 import { css } from "@emotion/react"
+import Link from "next/link"
 
 type ActiveMenuType = "input" | "calendar" | "config"
 
@@ -21,9 +22,15 @@ const Footer = ({ activeMenu }: Props) => {
         background-color: #e6e6e6;
       `}
     >
-      <span css={activeMenu === "input" && activeMenuStyle}>入力</span>
-      <span css={activeMenu === "calendar" && activeMenuStyle}>カレンダー</span>
-      <span css={activeMenu === "config" && activeMenuStyle}>設定</span>
+      <Link href="/" passHref>
+        <a css={activeMenu === "input" && activeMenuStyle}>入力</a>
+      </Link>
+      <Link href="/calendar" passHref>
+        <a css={activeMenu === "calendar" && activeMenuStyle}>カレンダー</a>
+      </Link>
+      <Link href="/config" passHref>
+        <a css={activeMenu === "config" && activeMenuStyle}>設定</a>
+      </Link>
     </footer>
   )
 }
