@@ -5,7 +5,7 @@ const Height = () => {
   return (
     <div
       css={css`
-        margin: 260px 50px 0;
+        margin: 160px 50px 0;
         display: flex;
         justify-content: space-around;
         align-items: center;
