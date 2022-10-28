@@ -4,8 +4,6 @@ import Header from "../../common/Header"
 import Date from "../../common/Date"
 import Weight_input from "../../common/Weight_input"
 import Registerbutton from "../../common/Registerbutton"
-import GoalWeight from "../../common/GoalWeight"
-import Height from "../../common/Height"
 
 const Page: NextPage = () => {
   return (
@@ -14,8 +12,6 @@ const Page: NextPage = () => {
       <Date />
       <Weight_input />
       <Registerbutton />
-      <Height />
-      <GoalWeight />
       <Footer activeMenu="input" />
     </>
   )
