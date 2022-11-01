@@ -1,7 +1,6 @@
-import { NextPage } from "next"
 import Page from "../src/components/pages/configweight"
 
-const ConfigWeight: NextPage = () => {
+const ConfigWeight = () => {
   return <Page />
 }
 

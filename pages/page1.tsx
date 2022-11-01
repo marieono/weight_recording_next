@@ -1,8 +1,7 @@
-import type { NextPage } from "next"
 import GoalWeight from "../src/components/common/GoalWeight"
 import Height from "../src/components/common/Height"
 
-const Page1: NextPage = () => {
+const Page1 = () => {
   return (
     <>
       <Height />
