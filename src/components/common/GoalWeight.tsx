@@ -1,4 +1,5 @@
 import { css } from "@emotion/react"
+import Link from "next/link"
 import Forwordbutton from "./Forwordbutton"
 
 const GoalWeight = () => {
@@ -26,7 +27,13 @@ const GoalWeight = () => {
           width: 335px auto;
         `}
       >
-        kg <Forwordbutton />
+        kg
+        <Link href="/config_weight">
+          <a>
+            {/* {" "} */}
+            <Forwordbutton />
+          </a>
+        </Link>
       </div>
     </div>
   )
