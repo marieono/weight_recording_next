@@ -1,4 +1,5 @@
 import { css } from "@emotion/react"
+import Link from "next/link"
 
 const FooterSet = () => {
   return (
@@ -16,20 +17,24 @@ const FooterSet = () => {
         color: white;
       `}
     >
-      <div
-        css={css`
-          margin: 0 30px 0;
-        `}
-      >
-        キャンセル
-      </div>
-      <div
-        css={css`
-          margin: 0 30px 0;
-        `}
-      >
-        OK
-      </div>
+      <Link href="/config" passHref>
+        <a
+          css={css`
+            margin: 0 30px 0;
+          `}
+        >
+          キャンセル
+        </a>
+      </Link>
+      <Link href="/config" passHref>
+        <a
+          css={css`
+            margin: 0 30px 0;
+          `}
+        >
+          OK
+        </a>
+      </Link>
     </footer>
   )
 }
