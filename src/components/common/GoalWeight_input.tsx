@@ -4,7 +4,7 @@ const GoalWeight_input = () => {
   return (
     <div
       css={css`
-        margin-top: 350px;
+        margin-top: 250px;
         display: flex;
         justify-content: center;
         align-items: center;
