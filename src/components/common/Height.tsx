@@ -1,4 +1,5 @@
 import { css } from "@emotion/react"
+import Link from "next/link"
 import Forwordbutton from "./Forwordbutton"
 
 const Height = () => {
@@ -26,7 +27,13 @@ const Height = () => {
           width: 335px auto;
         `}
       >
-        cm <Forwordbutton />
+        cm
+        <Link href="/config_weight">
+          <a>
+            {/* {" "} */}
+            <Forwordbutton />
+          </a>
+        </Link>
       </div>
     </div>
   )
