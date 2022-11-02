@@ -28,7 +28,7 @@ const Height = () => {
         `}
       >
         cm
-        <Link href="/config_weight">
+        <Link href="/config_height">
           <a>
             {/* {" "} */}
             <Forwordbutton />
