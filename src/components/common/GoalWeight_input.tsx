@@ -16,14 +16,17 @@ const GoalWeight_input = () => {
       `}
     >
       目標体重
-      <div
-        css={css`
-          margin: 15px;
-          height: 40px;
-          width: 83px;
-          border: solid black 1px;
-        `}
-      ></div>
+      <div>
+        <input
+          type="text"
+          css={css`
+            margin: 15px;
+            height: 40px;
+            width: 83px;
+            border: solid black 1px;
+          `}
+        ></input>
+      </div>
       kg
     </div>
   )
