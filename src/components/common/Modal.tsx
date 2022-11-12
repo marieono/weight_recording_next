@@ -1,6 +1,6 @@
 import { css } from "@emotion/react"
 
-const Mordal = () => {
+const Modal = () => {
   return (
     <div
       css={css`
@@ -42,7 +42,7 @@ const Mordal = () => {
   )
 }
 
-export default Mordal
+export default Modal
 
 const style = css`
   display: flex;
