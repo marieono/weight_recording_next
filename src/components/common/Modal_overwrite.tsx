@@ -31,35 +31,28 @@ const Modal_overwrite = () => {
         <div
           css={css`
             ${style};
-            padding: 15px 0 0;
           `}
         >
           既にデータが登録されています。
-        </div>
-        <div
-          css={css`
-            padding-bottom: 5px;
-          `}
-        >
+          <br />
           上書きしますか？
         </div>
         <div
           css={css`
-            ${overwrite};
-            border-top: solid 1px #e6e6e6;
-            padding-left: 15px;
+            display: flex;
           `}
         >
-          キャンセル
-          <div
-            css={css`
-              border-left: solid 1px #e6e6e6;
-            `}
-          ></div>
           <div
             css={css`
               ${overwrite};
-              padding-right: 15px;
+            `}
+          >
+            キャンセル
+          </div>
+
+          <div
+            css={css`
+              ${overwrite};
             `}
           >
             上書き
@@ -76,9 +69,14 @@ const style = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 15px 0;
 `
 
 const overwrite = css`
+  border-left: solid 1px #e6e6e6;
+  border-top: solid 1px #e6e6e6;
   display: flex;
+  width: 50%;
   justify-content: space-around;
+  padding: 15px 0;
 `

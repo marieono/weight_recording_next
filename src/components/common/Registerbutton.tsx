@@ -24,4 +24,9 @@ const Registerbutton = () => {
     </Link>
   )
 }
+
+// onClick={register}
+// const register = () => {
+//   ;
+// }
 export default Registerbutton
