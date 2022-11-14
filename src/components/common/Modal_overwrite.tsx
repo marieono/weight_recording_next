@@ -53,6 +53,7 @@ const Modal_overwrite = () => {
           <div
             css={css`
               ${overwrite};
+              border-left: solid 1px #e6e6e6;
             `}
           >
             上書き
@@ -73,7 +74,6 @@ const style = css`
 `
 
 const overwrite = css`
-  border-left: solid 1px #e6e6e6;
   border-top: solid 1px #e6e6e6;
   display: flex;
   width: 50%;
