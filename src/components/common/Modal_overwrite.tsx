@@ -25,7 +25,6 @@ const Modal_overwrite = () => {
           border-radius: 10px;
           box-shadow: 2px 2px 4px #e6e6e6;
           background-color: white;
-          text-align: center;
         `}
       >
         <div
@@ -70,6 +69,7 @@ const style = css`
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 15px 0;
 `
 
