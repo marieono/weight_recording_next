@@ -4,8 +4,8 @@ import Header from "../../common/Header"
 import Date from "../../common/Date"
 import Weight_input from "../../common/Weight_input"
 import Registerbutton from "../../common/Registerbutton"
-// import Modal from "../../common/Modal"
-import Modal_overwrite from "../../common/Modal_overwrite"
+import Modal from "../../common/Modal"
+// import Modal_overwrite from "../../common/Modal_overwrite"
 
 const Page: NextPage = () => {
   return (
@@ -14,8 +14,8 @@ const Page: NextPage = () => {
       <Date />
       <Weight_input />
       <Registerbutton />
-      {/* <Modal /> */}
-      <Modal_overwrite />
+      <Modal />
+      {/* <Modal_overwrite /> */}
       <Footer activeMenu="input" />
     </>
   )
