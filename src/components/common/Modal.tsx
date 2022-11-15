@@ -1,8 +1,11 @@
 import { css } from "@emotion/react"
 
-const Modal = () => {
+type Props = { closeModal?: () => void }
+
+const Modal = ({ closeModal }: Props) => {
   return (
     <div
+      onClick={closeModal}
       css={css`
         display: flex;
         justify-content: center;
@@ -18,6 +21,7 @@ const Modal = () => {
       `}
     >
       <div
+        onClick={(e) => e.stopPropagation()}
         css={css`
           width: 260px;
           margin: 65px auto;
@@ -30,9 +34,11 @@ const Modal = () => {
       >
         <div css={style}>入力完了</div>
         <div
+          onClick={closeModal}
           css={css`
             ${style};
             border-top: solid 1px #e6e6e6;
+            cursor: pointer;
           `}
         >
           閉じる
