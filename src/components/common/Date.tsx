@@ -12,7 +12,13 @@ const Date = () => {
         font-weight: bold;
       `}
     >
-      <Backbutton />
+      <div
+        css={css`
+          cursor: pointer;
+        `}
+      >
+        <Backbutton />
+      </div>
       <div
         css={css`
           display: flex;
@@ -27,7 +33,13 @@ const Date = () => {
       >
         2022 9.19 MON
       </div>
-      <Forwordbutton />
+      <div
+        css={css`
+          cursor: pointer;
+        `}
+      >
+        <Forwordbutton />
+      </div>
     </div>
   )
 }
