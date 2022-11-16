@@ -15,6 +15,7 @@ const Registerbutton = ({ onClick }: Props) => {
         height: 50px;
         width: 250px;
         border-radius: 30px;
+        font-size: 17px;
         background-color: #f95791;
         opacity: 0.5;
         color: white;
@@ -27,8 +28,4 @@ const Registerbutton = ({ onClick }: Props) => {
   )
 }
 
-// onClick={register}
-// const register = () => {
-//   ;
-// }
 export default Registerbutton
