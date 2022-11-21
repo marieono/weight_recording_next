@@ -36,7 +36,6 @@ const Date = ({ title }: Props) => {
         `}
       >
         {title}
-        {/* 2022 9.19 MON */}
       </div>
       <div
         css={css`
