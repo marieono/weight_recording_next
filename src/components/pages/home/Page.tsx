@@ -13,7 +13,7 @@ const Page: NextPage = () => {
   return (
     <>
       <Header title="入力" />
-      <Date />
+      <Date title="2022 9.19 MON" />
       <Weight_input />
       <Registerbutton onClick={() => setModalVisible(true)} />
       <Footer activeMenu="input" />

@@ -2,7 +2,11 @@ import { css } from "@emotion/react"
 import Backbutton from "./Backbutton"
 import Forwordbutton from "./Forwordbutton"
 
-const Date = () => {
+type Props = {
+  title: string
+}
+
+const Date = ({ title }: Props) => {
   return (
     <div
       css={css`
@@ -31,7 +35,8 @@ const Date = () => {
           background-color: #e6e6e6;
         `}
       >
-        2022 9.19 MON
+        {title}
+        {/* 2022 9.19 MON */}
       </div>
       <div
         css={css`
