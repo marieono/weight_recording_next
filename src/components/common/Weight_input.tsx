@@ -18,7 +18,7 @@ const Weight_input = () => {
       体重
       <div>
         <input
-          type="text"
+          type="number"
           css={css`
             margin: 15px;
             height: 40px;
