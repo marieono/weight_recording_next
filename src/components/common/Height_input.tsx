@@ -18,7 +18,7 @@ const Height_input = () => {
       身長
       <div>
         <input
-          type="text"
+          type="number"
           css={css`
             margin: 15px;
             height: 40px;
