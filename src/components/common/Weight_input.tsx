@@ -19,6 +19,7 @@ const Weight_input = () => {
       <div>
         <input
           type="tel"
+          pattern="\d.?"
           css={css`
             margin: 15px;
             height: 40px;
