@@ -1,7 +1,6 @@
 import { css } from "@emotion/react"
 
 type Props = { onClick?: () => void }
-
 const Registerbutton = ({ onClick }: Props) => {
   return (
     <button
@@ -17,11 +16,15 @@ const Registerbutton = ({ onClick }: Props) => {
         border-radius: 30px;
         font-size: 17px;
         background-color: #f95791;
-        opacity: 0.5;
+        &:disabled {
+          opacity: 0.5;
+        }
+
         color: white;
         border: none;
         cursor: pointer;
       `}
+      disabled={true}
     >
       登録する
     </button>
