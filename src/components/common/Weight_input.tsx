@@ -1,5 +1,5 @@
 import { css } from "@emotion/react"
-import { useForm } from "react-hook-form"
+import { SubmitHandler, useForm } from "react-hook-form"
 import { WeightRecord } from "./types"
 
 const Weight_input = () => {
@@ -10,6 +10,8 @@ const Weight_input = () => {
     setValue,
     formState: { errors, isValid },
   } = useForm<WeightRecord>({ mode: "onChange" })
+
+  const onSubmit: SubmitHandler<WeightRecord> = (data) => console.log(data)
 
   return (
     <div
@@ -39,6 +41,7 @@ const Weight_input = () => {
             `}
             {...register("weight", {
               required: "入力してください。",
+
               valueAsNumber: true,
               validate: (value) =>
                 !isNaN(value) || "半角数字で入力してください。",
