@@ -1,4 +1,5 @@
 import { css } from "@emotion/react"
+import { WeightRecord } from "./types"
 
 type Props = { onClick?: () => void }
 const Registerbutton = ({ onClick }: Props) => {
@@ -25,6 +26,9 @@ const Registerbutton = ({ onClick }: Props) => {
         cursor: pointer;
       `}
       disabled={true}
+      variant="contained"
+      type="submit"
+      disabled={!isValid}
     >
       登録する
     </button>
