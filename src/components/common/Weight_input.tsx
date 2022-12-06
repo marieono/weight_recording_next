@@ -46,8 +46,6 @@ const Weight_input = () => {
               validate: (value) =>
                 !isNaN(value) || "半角数字で入力してください。",
             })}
-            error={errors.weight != null}
-            helperText={errors.weight?.message ?? " "}
           ></input>
         </form>
       </div>
