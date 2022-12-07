@@ -1,4 +1,6 @@
 import { css } from "@emotion/react"
+import { WeightForm } from "./Weight_input"
+import { useForm } from "react-hook-form"
 import { WeightRecord } from "./types"
 
 type Props = { onClick?: () => void }
@@ -25,8 +27,6 @@ const Registerbutton = ({ onClick }: Props) => {
         border: none;
         cursor: pointer;
       `}
-      disabled={true}
-      variant="contained"
       type="submit"
       disabled={!isValid}
     >
