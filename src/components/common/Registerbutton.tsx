@@ -1,7 +1,7 @@
 import { css } from "@emotion/react"
-import { WeightForm } from "./Weight_input"
-import { useForm } from "react-hook-form"
-import { WeightRecord } from "./types"
+// import { WeightForm } from "./Weight_input"
+// import { useForm } from "react-hook-form"
+// import { WeightRecord } from "./types"
 
 type Props = { onClick?: () => void }
 const Registerbutton = ({ onClick }: Props) => {
@@ -28,7 +28,7 @@ const Registerbutton = ({ onClick }: Props) => {
         cursor: pointer;
       `}
       type="submit"
-      disabled={!isValid}
+      // disabled={!isValid}
     >
       登録する
     </button>
