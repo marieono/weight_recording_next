@@ -3,7 +3,7 @@ import Footer from "../../common/Footer"
 import Header from "../../common/Header"
 import Date from "../../common/Date"
 import Weight_input from "../../common/Weight_input"
-import Registerbutton from "../../common/Registerbutton"
+// import Registerbutton from "../../common/Registerbutton"
 import { useState } from "react"
 import Modal from "../../common/Modal"
 
@@ -15,7 +15,7 @@ const Page: NextPage = () => {
       <Header title="入力" />
       <Date title="2022 9.19 MON" />
       <Weight_input />
-      <Registerbutton onClick={() => setModalVisible(true)} />
+      {/* <Registerbutton onClick={() => setModalVisible(true)}/>  */}
       <Footer activeMenu="input" />
       {modalVisible && <Modal closeModal={() => setModalVisible(false)} />}
     </>

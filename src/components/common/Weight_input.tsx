@@ -16,22 +16,22 @@ const Weight_input = () => {
 
   return (
     <>
-      <div
-        css={css`
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 70px;
-          width: 100vw;
-          background-color: #fee6ef;
-          font-family: "Regular";
-          font-weight: bold;
-          font-style: 17px;
-        `}
-      >
-        体重
-        <div>
-          <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div
+          css={css`
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70px;
+            width: 100vw;
+            background-color: #fee6ef;
+            font-family: "Regular";
+            font-weight: bold;
+            font-style: 17px;
+          `}
+        >
+          体重
+          <div>
             <input
               type="tel"
               css={css`
@@ -49,11 +49,13 @@ const Weight_input = () => {
                   !isNaN(value) || "半角数字で入力してください。",
               })}
             ></input>
-          </form>
+          </div>
+          kg
         </div>
-        kg
-      </div>
-      <Registerbutton />
+        <div>
+          <Registerbutton disabled={!isValid} />
+        </div>
+      </form>
     </>
   )
 }
