@@ -66,7 +66,12 @@ const Weight_input = () => {
             {errors.weight.message}
           </div>
         )}
-        <div>
+        <div
+          css={css`
+            /* position: fixed;
+            margin-top: 50px; */
+          `}
+        >
           <Registerbutton disabled={!isValid} />
         </div>
       </form>
