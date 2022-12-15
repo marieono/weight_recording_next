@@ -55,10 +55,10 @@ const Weight_input = () => {
         {errors.weight != null && (
           <div
             css={css`
-              /* margin: 15px;
-                  height: 40px;
-                  width: 83px; */
-              margin-top: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100vw;
               font-size: 5px;
               color: red;
             `}
