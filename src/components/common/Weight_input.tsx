@@ -49,23 +49,23 @@ const Weight_input = () => {
                   !isNaN(value) || "半角数字で入力してください。",
               })}
             ></input>
-            {errors.weight != null && (
-              <div
-                css={css`
-                  /* margin: 15px;
-                  height: 40px;
-                  width: 83px; */
-                  margin-top: 10px;
-                  font-size: 5px;
-                  color: red;
-                `}
-              >
-                {errors.weight.message}
-              </div>
-            )}
           </div>
           kg
         </div>
+        {errors.weight != null && (
+          <div
+            css={css`
+              /* margin: 15px;
+                  height: 40px;
+                  width: 83px; */
+              margin-top: 10px;
+              font-size: 5px;
+              color: red;
+            `}
+          >
+            {errors.weight.message}
+          </div>
+        )}
         <div>
           <Registerbutton disabled={!isValid} />
         </div>
