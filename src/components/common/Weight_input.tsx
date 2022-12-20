@@ -52,7 +52,6 @@ const Weight_input = () => {
           </div>
           kg
         </div>
-        {/* {errors.weight != null && ( */}
         <div
           css={css`
             min-height: 20px;
@@ -60,21 +59,13 @@ const Weight_input = () => {
             justify-content: center;
             align-items: center;
             width: 100vw;
-            font-size: 5px;
+            font-size: 15px;
             color: red;
           `}
         >
           {errors.weight?.message}
         </div>
-        {/* )} */}
-        <div
-          css={css`
-            /* position: fixed;
-            margin-top: 50px; */
-          `}
-        >
-          <Registerbutton disabled={!isValid} />
-        </div>
+        <Registerbutton disabled={!isValid} />
       </form>
     </>
   )
