@@ -64,7 +64,7 @@ const Weight_input = () => {
             color: red;
           `}
         >
-          {errors.weight.message}
+          {errors.weight?.message}
         </div>
         {/* )} */}
         <div
