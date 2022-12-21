@@ -54,7 +54,7 @@ const Weight_input = () => {
         </div>
         <div
           css={css`
-            min-height: 20px;
+            min-height: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
