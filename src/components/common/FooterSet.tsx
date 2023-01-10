@@ -26,15 +26,20 @@ const FooterSet = () => {
           キャンセル
         </a>
       </Link>
-      <Link href="/config" passHref>
-        <a
-          css={css`
-            margin: 0 30px 0;
-          `}
-        >
-          OK
-        </a>
-      </Link>
+      {/* <Link href="/config" passHref> */}
+      <button
+        css={css`
+          margin: 0 30px 0;
+          border: none;
+          cursor: pointer;
+          background-color: #f95791;
+          color: white;
+          font-weight: bold;
+        `}
+      >
+        OK
+      </button>
+      {/* </Link> */}
     </footer>
   )
 }
