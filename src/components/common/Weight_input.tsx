@@ -1,5 +1,7 @@
 import { css } from "@emotion/react"
+import { addDoc, collection } from "firebase/firestore"
 import { SubmitHandler, useForm } from "react-hook-form"
+import { db } from "../../firebase"
 import Registerbutton from "./Registerbutton"
 import { WeightRecord } from "./types"
 
@@ -12,7 +14,13 @@ const Weight_input = () => {
     formState: { errors, isValid },
   } = useForm<WeightRecord>({ mode: "onChange" })
 
-  const onSubmit: SubmitHandler<WeightRecord> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<WeightRecord> = async (data) => {
+    try {
+      await addDoc(collection(db, "weight-records"), data)
+    } catch (e) {
+      alert(`FireSoreへの書き込み中にエラーが発生しました:${e}`)
+    }
+  }
 
   return (
     <>
@@ -67,6 +75,8 @@ const Weight_input = () => {
         </div>
         <Registerbutton disabled={!isValid} />
       </form>
+      {/* const weightRecord = doc.data()as WeigtRecord
+      {<p>{WeightRecord.weight}kg</p>} */}
     </>
   )
 }
