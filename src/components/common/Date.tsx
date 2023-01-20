@@ -36,6 +36,7 @@ const Date = ({ title }: Props) => {
         `}
       >
         {title}
+        <input type="date" />
       </div>
       <div
         css={css`
