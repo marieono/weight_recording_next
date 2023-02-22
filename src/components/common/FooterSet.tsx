@@ -1,5 +1,6 @@
 import { css } from "@emotion/react"
 import Link from "next/link"
+import FooterOkbutton from "./FooterOkbutton"
 
 const FooterSet = () => {
   return (
@@ -26,20 +27,7 @@ const FooterSet = () => {
           キャンセル
         </a>
       </Link>
-      {/* <Link href="/config" passHref> */}
-      <button
-        css={css`
-          margin: 0 30px 0;
-          border: none;
-          cursor: pointer;
-          background-color: #f95791;
-          color: white;
-          font-weight: bold;
-        `}
-      >
-        OK
-      </button>
-      {/* </Link> */}
+      <FooterOkbutton />
     </footer>
   )
 }

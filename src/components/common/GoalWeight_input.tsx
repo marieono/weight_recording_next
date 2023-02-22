@@ -1,5 +1,7 @@
 import { css } from "@emotion/react"
+import { addDoc, collection } from "firebase/firestore"
 import { SubmitHandler, useForm } from "react-hook-form"
+import { db } from "../../firebase"
 import { WeightGoalRecord } from "./types"
 
 const GoalWeight_input = () => {
@@ -9,7 +11,13 @@ const GoalWeight_input = () => {
     formState: { errors },
   } = useForm<WeightGoalRecord>({ mode: "onChange" })
 
-  const onSubmit: SubmitHandler<WeightGoalRecord> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<WeightGoalRecord> = async (data) => {
+    try {
+      await addDoc(collection(db, "weight-records"), data)
+    } catch (e) {
+      alert(`FireStoreへの書き込み中にエラーが発生しました:${e}`)
+    }
+  }
 
   return (
     <>

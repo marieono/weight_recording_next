@@ -20,7 +20,7 @@ const Page: NextPage = () => {
       await addDoc(collection(db, "weight-records"), data)
       setModalVisible(true)
     } catch (e) {
-      alert(`FireSoreへの書き込み中にエラーが発生しました:${e}`)
+      alert(`FireStoreへの書き込み中にエラーが発生しました:${e}`)
     }
   }
   return (
