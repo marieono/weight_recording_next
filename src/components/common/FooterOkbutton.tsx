@@ -1,9 +1,13 @@
 import { css } from "@emotion/react"
 
-const FooterOkbutton = () => {
+type Props = {
+  onClick?: () => void
+}
+
+const FooterOkbutton = ({ onClick }: Props) => {
   return (
     <button
-      // onClick={}
+      onClick={onClick}
       css={css`
         margin: 0 30px 0;
         border: none;
@@ -12,6 +16,7 @@ const FooterOkbutton = () => {
         color: white;
         font-weight: bold;
       `}
+      type="submit"
     >
       OK
     </button>
