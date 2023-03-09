@@ -1,17 +1,32 @@
 import type { NextPage } from "next"
 import Footer from "../../common/Footer"
 import Header from "../../common/Header"
-import Date from "../../common/Date"
+import DateInput from "../../common/DateInput"
 import Weight_input from "../../common/Weight_input"
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import Modal from "../../common/Modal"
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form"
 import { WeightRecord } from "../../common/types"
 import { addDoc, collection } from "firebase/firestore"
 import { db } from "../../../firebase"
 
+/**
+ * 日付データをハイフン区切りのテキストに変換
+ */
+const getDateText = (date: Date): string => {
+  return [
+    date.getFullYear(),
+    (date.getMonth() + 1).toString().padStart(2, "0"),
+    date.getDate().toString().padStart(2, "0"),
+  ].join("-")
+}
+
 const Page: NextPage = () => {
-  const methods = useForm<WeightRecord>({ mode: "onChange" })
+  const today = useMemo(() => getDateText(new Date()), [])
+  const methods = useForm<WeightRecord>({
+    mode: "onChange",
+    defaultValues: { date: today },
+  })
   const { handleSubmit } = methods
   const [modalVisible, setModalVisible] = useState(false)
 
@@ -28,7 +43,7 @@ const Page: NextPage = () => {
       <Header title="入力" />
       <FormProvider {...methods}>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <Date title="2022 9.19 MON" />
+          <DateInput />
           <Weight_input />
         </form>
       </FormProvider>

@@ -4,10 +4,7 @@ import Backbutton from "./Backbutton"
 import Forwordbutton from "./Forwordbutton"
 import { WeightRecord } from "./types"
 
-type Props = {
-  title: string
-}
-const Date = ({ title }: Props) => {
+const DateInput = () => {
   const {
     register,
     // setValue,
@@ -42,9 +39,7 @@ const Date = ({ title }: Props) => {
           background-color: #e6e6e6;
         `}
       >
-        <input type="date" {...register("date")}>
-          {title}
-        </input>
+        <input type="date" {...register("date")} />
       </div>
       <div
         css={css`
@@ -57,4 +52,4 @@ const Date = ({ title }: Props) => {
   )
 }
 
-export default Date
+export default DateInput
