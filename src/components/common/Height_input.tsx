@@ -1,26 +1,15 @@
 import { css } from "@emotion/react"
-import { addDoc, collection } from "firebase/firestore"
-import { SubmitHandler, useForm } from "react-hook-form"
-import { db } from "../../firebase"
+import { useFormContext } from "react-hook-form"
 import { HeightRecord } from "./types"
 
 const Height_input = () => {
   const {
     register,
-    handleSubmit,
     formState: { errors },
-  } = useForm<HeightRecord>({ mode: "onChange" })
-
-  const onSubmit: SubmitHandler<HeightRecord> = async (data) => {
-    try {
-      await addDoc(collection(db, "weight-records"), data)
-    } catch (e) {
-      alert(`FireStoreへの書き込み中にエラーが発生しました:${e}`)
-    }
-  }
+  } = useFormContext<HeightRecord>()
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <>
       <div
         css={css`
           margin-top: 200px;
@@ -68,7 +57,7 @@ const Height_input = () => {
       >
         {errors.height?.message}
       </div>
-    </form>
+    </>
   )
 }
 
