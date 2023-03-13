@@ -32,7 +32,10 @@ const Page: NextPage = () => {
 
   const onSubmit: SubmitHandler<WeightRecord> = async (data) => {
     try {
-      await addDoc(collection(db, "weight-records"), data)
+      await addDoc(collection(db, "weight-records"), {
+        ...data,
+        date: new Date(data.date),
+      })
       setModalVisible(true)
     } catch (e) {
       alert(`FireStoreへの書き込み中にエラーが発生しました:${e}`)
