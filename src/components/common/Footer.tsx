@@ -28,9 +28,6 @@ const Footer = ({ activeMenu }: Props) => {
       <Link href="/calendar" passHref>
         <a css={activeMenu === "calendar" && activeMenuStyle}>カレンダー</a>
       </Link>
-      <Link href="/config" passHref>
-        <a css={activeMenu === "config" && activeMenuStyle}>設定</a>
-      </Link>
     </footer>
   )
 }
