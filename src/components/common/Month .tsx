@@ -2,10 +2,15 @@ import { css } from "@emotion/react"
 import Backbutton from "./Backbutton"
 import Forwordbutton from "./Forwordbutton"
 
-const Month = () => {
-  const now = new Date()
-  const year = now.getFullYear()
-  const currentMonth = now.getMonth() + 1
+type Props = {
+  targetMonth: Date
+  addMonth: () => void
+  subMonth: () => void
+}
+
+const Month = ({ targetMonth, addMonth, subMonth }: Props) => {
+  const year = targetMonth.getFullYear()
+  const currentMonth = targetMonth.getMonth() + 1
 
   return (
     <>
@@ -21,6 +26,7 @@ const Month = () => {
           css={css`
             cursor: pointer;
           `}
+          onClick={subMonth}
         >
           <Backbutton />
         </div>
@@ -43,6 +49,7 @@ const Month = () => {
           css={css`
             cursor: pointer;
           `}
+          onClick={addMonth}
         >
           <Forwordbutton />
         </div>
