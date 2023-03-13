@@ -59,7 +59,7 @@ const Table = ({ targetMonth }: Props) => {
       css={css`
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
       `}
     >
       <table
@@ -91,9 +91,9 @@ const Table = ({ targetMonth }: Props) => {
           {leftDayList.map((day) => {
             const record = weightMap.get(day)
             return (
-              <tr key={day}>
-                <td css={tdpink}>{day}</td>
-                <td css={tdpink}>{record?.weight}</td>
+              <tr key={day} css={tr}>
+                <td css={td}>{day}</td>
+                <td css={td}>{record?.weight}</td>
               </tr>
             )
           })}
@@ -128,9 +128,9 @@ const Table = ({ targetMonth }: Props) => {
           {rightDayList.map((day) => {
             const record = weightMap.get(day)
             return (
-              <tr key={day}>
-                <td css={tdpink}>{day}</td>
-                <td css={tdpink}>{record?.weight}</td>
+              <tr key={day} css={tr}>
+                <td css={td}>{day}</td>
+                <td css={td}>{record?.weight}</td>
               </tr>
             )
           })}
@@ -155,13 +155,16 @@ const th = css`
   line-height: 30px;
 `
 
-const tdpink = css`
-  background: #fee6ef;
+const td = css`
   border-bottom: solid 1px #d9d9d9;
   text-align: center;
 `
-const tdwhite = css`
-  background: white;
-  border-bottom: solid 1px #d9d9d9;
-  text-align: center;
+
+const tr = css`
+  &:nth-of-type(odd) {
+    background: white;
+  }
+  &:nth-of-type(even) {
+    background: #fee6ef;
+  }
 `
