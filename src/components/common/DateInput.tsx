@@ -1,7 +1,7 @@
 import { css } from "@emotion/react"
 import { useFormContext } from "react-hook-form"
-import Backbutton from "./Backbutton"
-import Forwordbutton from "./Forwordbutton"
+// import Backbutton from "./Backbutton"
+// import Forwordbutton from "./Forwordbutton"
 import { WeightRecord } from "./types"
 
 const DateInput = () => {
@@ -25,7 +25,7 @@ const DateInput = () => {
           cursor: pointer;
         `}
       >
-        <Backbutton />
+        {/* <Backbutton /> */}
       </div>
       <div
         css={css`
@@ -46,7 +46,7 @@ const DateInput = () => {
           cursor: pointer;
         `}
       >
-        <Forwordbutton />
+        {/* <Forwordbutton /> */}
       </div>
     </div>
   )
